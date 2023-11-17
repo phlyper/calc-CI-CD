@@ -5,12 +5,15 @@ on:
     branches:
       - 'staging'
 
+env:
+  ENV_BRANCH: staging
+
 jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
       - name: Get current branch
-        run: echo "Current branch: ${{ env.GITHUB_REF_NAME }}"
+        run: echo "Current branch: ${{ env.ENV_BRANCH }}"
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
@@ -33,4 +36,4 @@ jobs:
           context: ./sources
           file: ./sources/Dockerfile
           push: true
-          tags: katef2022/calc-${{ env.GITHUB_REF_NAME }}:1.2.${{ github.run_number }}
+          tags: katef2022/calc-${{ env.ENV_BRANCH }}:1.2.${{ github.run_number }}
