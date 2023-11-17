@@ -1,3 +1,8 @@
+Python et le nombre d’or
+
+- https://www.mathweb.fr/euclide/2019/03/15/python-et-le-nombre-dor/
+
+
 # calc-CI-CD
 
 

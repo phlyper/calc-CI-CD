@@ -3,12 +3,15 @@ name: Update Docker app-calc
 on:
   push:
     branches:
-      - 'main'
+      - 'staging'
 
 jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
+      - 
+        name: Get current branch
+        run: echo "Current branch: ${{ env.GITHUB_REF##refs/heads/ }}"
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v2
@@ -31,4 +34,4 @@ jobs:
           context: ./sources
           file: ./sources/Dockerfile
           push: true
-          tags: katef2022/docker:1.0.${{ github.run_number }}
+          tags: katef2022/calc-${{ env.GITHUB_REF##refs/heads/ }}:1.2.${{ github.run_number }}

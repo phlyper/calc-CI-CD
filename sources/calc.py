@@ -1,50 +1,21 @@
 """
-La librairie calc permet de faire les opérations basiques de calcul entre deux entiers.
+La librairie calc permet de faire les opérations de calcul perimetre et surface.
 """
 
-def add(arg1,arg2):
-    try:
-        return int(arg1)+int(arg2)
-    except ValueError: 
-        print("Vous devez entrer un entier.") 
+def perimetre_rectangle(largeur, longueur):
+  return 2 * (largeur + longueur)
 
-def sous(arg1,arg2):
-    try:
-        return int(arg1)-int(arg2)
-    except ValueError:
-        print("Un des arguments n'est pas un entier.")
+def surface_rectangle(largeur, longueur):
+  return largeur * longueur
 
+def perimetre_cercle(rayon):
+  return 2 * 3.14159 * rayon
 
-def mult(arg1,arg2):
-    try:
-        return int(arg1)*int(arg2)
-    except ValueError:
-        print("Un des arguments n'est pas un entier.")
+def surface_cercle(rayon):
+  return 3.14159 * rayon ** 2
 
-def div(arg1,arg2):
-    try:
-        return int(arg1)/int(arg2)
-    except ValueError:
-        print("Un des arguments n'est pas un entier.")
-    except ZeroDivisionError:
-        print("Vous divisez par 0.")
+def perimetre_triangle(côté_a, côté_b, côté_c):
+  return côté_a + côté_b + côté_c
 
-def modulo(arg1,arg2):
-    try:
-        return int(arg1)%int(arg2)
-    except ValueError:
-        print("Un des arguments n'est pas un entier")
-
-def ope(operateur,arg1,arg2):
-    if operateur=='+':
-        return add(arg1,arg2)
-    elif operateur=="%":
-        return modulo(arg1,arg2)
-    elif operateur=="-":
-        return sous(arg1,arg2)
-    elif operateur=="x":
-        return mult(arg1,arg2)
-    elif operateur=="/":
-        return div(arg1,arg2)
-    else:
-        print("L'opérateur {} n'est pas reconnu.".format(operateur))
+def surface_triangle(base, hauteur):
+  return (base * hauteur) / 2
