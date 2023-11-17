@@ -12,8 +12,8 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      - name: Get current branch
-        run: echo "Current branch : $ENV_BRANCH"
+    #   - name: Get current branch
+    #     run: echo "Current branch : $ENV_BRANCH"
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
