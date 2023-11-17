@@ -9,7 +9,7 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      - 
+      -
         name: Get current branch
         run: echo "Current branch: ${{ env.GITHUB_REF##refs/heads/ }}"
       -
