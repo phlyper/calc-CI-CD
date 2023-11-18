@@ -27,8 +27,8 @@ def main_calc():
         longueur = float(input("Longueur du rectangle : "))
 
         # Calcul du périmètre et de la surface
-        perimetre = perimetre_rectangle(largeur, longueur)
-        surface = surface_rectangle(largeur, longueur)
+        perimetre = calc.perimetre_rectangle(largeur, longueur)
+        surface = calc.surface_rectangle(largeur, longueur)
 
         # Affichage des résultats
         print("Périmètre du rectangle :", perimetre)
@@ -39,8 +39,8 @@ def main_calc():
         rayon = float(input("Rayon du cercle : "))
 
         # Calcul du périmètre et de la surface
-        perimetre = perimetre_cercle(rayon)
-        surface = surface_cercle(rayon)
+        perimetre = calc.perimetre_cercle(rayon)
+        surface = calc.surface_cercle(rayon)
 
         # Affichage des résultats
         print("Périmètre du cercle :", perimetre)
@@ -53,8 +53,8 @@ def main_calc():
         côté_c = float(input("Longueur du côté c du triangle : "))
 
         # Calcul du périmètre et de la surface
-        perimetre = perimetre_triangle(côté_a, côté_b, côté_c)
-        surface = surface_triangle(côté_a, côté_b)
+        perimetre = calc.perimetre_triangle(côté_a, côté_b, côté_c)
+        surface = calc.surface_triangle(côté_a, côté_b)
 
         # Affichage des résultats
         print("Périmètre du triangle :", perimetre)
