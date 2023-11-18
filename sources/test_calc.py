@@ -56,5 +56,5 @@ class Test(unittest.TestCase):
         # Test avec des données invalides
         # self.assertRaises(ValueError, calc.surface_triangle, 0, 0)
 
-    if __name__ == "__main__":
-        unittest.main()
+if __name__ == "__main__":
+    unittest.main()
