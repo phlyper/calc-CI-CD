@@ -6,7 +6,7 @@ les deux entiers
 import calc
 import sys
 
-print("Bienvenue dans cette petite programme sous Python pour calculer le périmètre et la surface d'une forme géométrique.\n")
+print("Bienvenue dans ce petit programme sous Python permet de calculer le périmètre et la surface d'une forme géométrique.\n")
 
 
 def main_calc():
@@ -18,13 +18,13 @@ def main_calc():
     print("4. Quitter")
 
     # Choix de l'utilisateur
-    choix = input("Votre choix : ")
+    choix = input("Votre choix : \n")
 
     # Traitement du choix
     if choix == "1":
         # Saisie des dimensions du rectangle
-        largeur = float(input("Largeur du rectangle : "))
-        longueur = float(input("Longueur du rectangle : "))
+        largeur = float(input("Largeur du rectangle : \n"))
+        longueur = float(input("Longueur du rectangle : \n"))
 
         # Calcul du périmètre et de la surface
         perimetre = calc.perimetre_rectangle(largeur, longueur)
@@ -36,7 +36,7 @@ def main_calc():
 
     elif choix == "2":
         # Saisie du rayon du cercle
-        rayon = float(input("Rayon du cercle : "))
+        rayon = float(input("Rayon du cercle : \n"))
 
         # Calcul du périmètre et de la surface
         perimetre = calc.perimetre_cercle(rayon)
@@ -48,9 +48,9 @@ def main_calc():
 
     elif choix == "3":
         # Saisie des longueurs des côtés du triangle
-        côté_a = float(input("Longueur du côté a du triangle : "))
-        côté_b = float(input("Longueur du côté b du triangle : "))
-        côté_c = float(input("Longueur du côté c du triangle : "))
+        côté_a = float(input("Longueur du côté a du triangle : \n"))
+        côté_b = float(input("Longueur du côté b du triangle : \n"))
+        côté_c = float(input("Longueur du côté c du triangle : \n"))
 
         # Calcul du périmètre et de la surface
         perimetre = calc.perimetre_triangle(côté_a, côté_b, côté_c)
@@ -62,10 +62,13 @@ def main_calc():
 
     elif choix == "4":
         # Quitter le programme
-        print("Au revoir !")
+        print("Au revoir !\n")
     else:
         # Choix invalide
-        print("Choix invalide.")
+        print("Choix invalide.\n")
+
+    print("Nous allons recommencer le programme\n")
+    main_calc()
 
 if __name__ == "__main__":
     main_calc()
