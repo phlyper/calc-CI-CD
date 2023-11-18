@@ -13,9 +13,9 @@ tester le runner
 # Running
 
 ```bash
-python --version
+python3 --version
 # main program
-python sources/main.py
+python3 sources/main.py
 # test program
-python sources/test_calc.py
+python3 sources/test_calc.py
 ```
