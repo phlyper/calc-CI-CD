@@ -3,11 +3,11 @@ name: Update Docker app-calc
 on:
   push:
     branches:
-      - 'staging'
+      - 'main'
 
 env:
-  ENV_BRANCH: staging
-  ENV_VERSION: 1.4
+  ENV_BRANCH: stable
+  ENV_VERSION: 1.6
 
 jobs:
   docker:
